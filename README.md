@@ -1,5 +1,6 @@
-# This repository contains all code referenced in the medium article here:
-
+# This repository contains all code referenced in the medium article [Bootstrapping a fullstack application using aws cdk (2023)](https://medium.com/@rich.f.frank/bootstrapping-a-full-stack-application-using-aws-cdk-2023-60d2eaf999cc)
+                                                                        
+                                                                        
 # Navigating the Repo.
 - lib
   - aws_service_stack.ts -> infrastucture code
