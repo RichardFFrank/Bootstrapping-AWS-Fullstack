@@ -1,7 +1,0 @@
-{
-    "body":
-    {
-        "action": "getURL",
-        "key": "AFileName" 
-    }
-}
