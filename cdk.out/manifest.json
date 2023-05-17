@@ -1,0 +1,376 @@
+{
+  "version": "31.0.0",
+  "artifacts": {
+    "AwsServiceStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "AwsServiceStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "AwsServiceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AwsServiceStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d360552e3443846e179f466b3f44680aca882d1b58ba52296cfdb7b5b352b0b0.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "AwsServiceStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "AwsServiceStack.assets"
+      ],
+      "metadata": {
+        "/AwsServiceStack/FileDetailsTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FileDetailsTable9895FBF8"
+          }
+        ],
+        "/AwsServiceStack/UploadBucket + 46/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadBucket46C33933D9"
+          }
+        ],
+        "/AwsServiceStack/UploadBucket + 46/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadBucket46PolicyB5DE5B90"
+          }
+        ],
+        "/AwsServiceStack/UploadBucket + 46/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadBucket46AutoDeleteObjectsCustomResourceBA55E1C1"
+          }
+        ],
+        "/AwsServiceStack/UploadBucket + 46/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadBucket46Notifications2A1DDD53"
+          }
+        ],
+        "/AwsServiceStack/UploadBucket + 46/AllowBucketNotificationsToAwsServiceStacktriggerHandler28D5CBC3": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadBucket46AllowBucketNotificationsToAwsServiceStacktriggerHandler28D5CBC3AC851799"
+          }
+        ],
+        "/AwsServiceStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/AwsServiceStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/AwsServiceStack/lambdaFunction.handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaFunctionhandlerServiceRoleD1374824"
+          }
+        ],
+        "/AwsServiceStack/lambdaFunction.handler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaFunctionhandlerServiceRoleDefaultPolicy6B158845"
+          }
+        ],
+        "/AwsServiceStack/lambdaFunction.handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaFunctionhandler7EF31F19"
+          }
+        ],
+        "/AwsServiceStack/dynamoDBFunction.handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dynamoDBFunctionhandlerServiceRoleE1E5C1E9"
+          }
+        ],
+        "/AwsServiceStack/dynamoDBFunction.handler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dynamoDBFunctionhandlerServiceRoleDefaultPolicy09CFAC93"
+          }
+        ],
+        "/AwsServiceStack/dynamoDBFunction.handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dynamoDBFunctionhandler5EF1F270"
+          }
+        ],
+        "/AwsServiceStack/triggerHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "triggerHandlerServiceRole9BF9A02A"
+          }
+        ],
+        "/AwsServiceStack/triggerHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "triggerHandlerServiceRoleDefaultPolicy48D89528"
+          }
+        ],
+        "/AwsServiceStack/triggerHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "triggerHandler63D257A4"
+          }
+        ],
+        "/AwsServiceStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ],
+        "/AwsServiceStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36"
+          }
+        ],
+        "/AwsServiceStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/AwsServiceStack/urlApiGatewayPermission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayPermission"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGateway03684FD7"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayDeploymentFF4DFCA1f4bd2e147a5b459853cfc83e4cf0e52b"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayDeploymentStageprodB204213B"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayEndpoint34016AD2"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayOPTIONS079FA49B"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayproxy053DEEA7"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/{proxy+}/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayproxyOPTIONS2EF06092"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/{proxy+}/ANY/ApiPermission.AwsServiceStackurlApiGatewayBF4AF6E4.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayproxyANYApiPermissionAwsServiceStackurlApiGatewayBF4AF6E4ANYproxyBA912F27"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/{proxy+}/ANY/ApiPermission.Test.AwsServiceStackurlApiGatewayBF4AF6E4.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayproxyANYApiPermissionTestAwsServiceStackurlApiGatewayBF4AF6E4ANYproxy22F55FB5"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayproxyANYE71239E8"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/ANY/ApiPermission.AwsServiceStackurlApiGatewayBF4AF6E4.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayANYApiPermissionAwsServiceStackurlApiGatewayBF4AF6E4ANYEBA58146"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/ANY/ApiPermission.Test.AwsServiceStackurlApiGatewayBF4AF6E4.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayANYApiPermissionTestAwsServiceStackurlApiGatewayBF4AF6E4ANY7DF701D9"
+          }
+        ],
+        "/AwsServiceStack/urlApiGateway/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlApiGatewayANY44CB05B2"
+          }
+        ],
+        "/AwsServiceStack/dbApiGatewayPermission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayPermission"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGateway95CFC0BD"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayDeploymentA0784B604bb29279ee68b894a45b78cf7d85e6aa"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayDeploymentStageprod6BE65734"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayEndpoint9606DF74"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayOPTIONS5A5DC513"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayproxy888DF1C9"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/{proxy+}/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayproxyOPTIONS2673A2C2"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/{proxy+}/ANY/ApiPermission.AwsServiceStackdbApiGateway97BCD796.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayproxyANYApiPermissionAwsServiceStackdbApiGateway97BCD796ANYproxy6FC08FA9"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/{proxy+}/ANY/ApiPermission.Test.AwsServiceStackdbApiGateway97BCD796.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayproxyANYApiPermissionTestAwsServiceStackdbApiGateway97BCD796ANYproxy60CCCCC5"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayproxyANYB1258942"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/ANY/ApiPermission.AwsServiceStackdbApiGateway97BCD796.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayANYApiPermissionAwsServiceStackdbApiGateway97BCD796ANYBC903820"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/ANY/ApiPermission.Test.AwsServiceStackdbApiGateway97BCD796.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayANYApiPermissionTestAwsServiceStackdbApiGateway97BCD796ANY57DDEF6F"
+          }
+        ],
+        "/AwsServiceStack/dbApiGateway/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbApiGatewayANYDF11A7EC"
+          }
+        ],
+        "/AwsServiceStack/react-frontend-app/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "reactfrontendappRole40EB7C17"
+          }
+        ],
+        "/AwsServiceStack/react-frontend-app/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "reactfrontendapp87E685F2"
+          }
+        ],
+        "/AwsServiceStack/react-frontend-app/main/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "reactfrontendappmain0C64D53B"
+          }
+        ],
+        "/AwsServiceStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/AwsServiceStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/AwsServiceStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/AwsServiceStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "AwsServiceStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
